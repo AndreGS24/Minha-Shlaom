@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quer Namorar Comigo?</title>
+
+    <style>
+      body{
+        background-color: #d507f0;
+      }
+      .painel{
+        margin: auto;
+        width: 500px;
+        height: 600px;
+        border-radius: 20px;
+        text-align: center;
+        padding-top: 50px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: #fafafa;
+      }
+      #sim{
+        margin-left: -70px;
+        height: 40px;
+        width: 60px;
+        background-color: #b102f7;
+        border:2px solid #fafafa;
+        border-radius: 10px;
+        color: #fafafa;
+      }
+      #não{
+        position: absolute;
+        height: 40px;
+        width: 60px;
+        background-color: #b102f7;
+        border:2px solid #fafafa;
+        border-radius: 10px;
+        margin-left: 10px;
+        color:#fafafa
+      }
+    </style>
+</head>
+<body>
+
+    <div class="painel">
+      <h1>Um Ursinho e um Pedido</h1>
+      <h1>Especial</h1>
+
+      <img src="https://gifman.net/wp-content/uploads/2019/06/ursinho-fofo-apaixonado.gif" alt="">
+
+      <h2>Aceita Namorar Comigo?</h2>
+
+      <a href="https://youtube.com/shorts/pwNSbV2wKzA"><button id="sim"> Sim! </button></a>
+      <button onmouseover="fuja()"  id="não"> Não! </button>
+
+      
+
+    </div>
+
+    <script>
+      function fuja(){
+        var botaoNao = document.getElementById("não")
+
+        var larguraJanela = window.innerWidth;
+        var alturaJanela = window.innerHeight;
+
+        var maxX = larguraJanela - botaoNao.offsetWidth;
+        var maxY = alturaJanela - botaoNao.offsetHeight;
+
+        var aleatorioX = Math.floor(Math.random() * maxX);
+        var aleatorioY = Math.floor(Math.random() * maxY);
+
+        botaoNao.style.left = aleatorioX + "px";
+        botaoNao.style.top = aleatorioY + "px";
+      }
+    </script>
+</body>  
+</html>
